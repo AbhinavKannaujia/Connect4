@@ -39,15 +39,15 @@ public class Main extends Application {
     private MenuBar createMenu() {
         Menu fileMenu = new Menu("File");
 
-        MenuItem newgame = new MenuItem("New Game");
+        MenuItem newgame = new MenuItem("New");
         newgame.setOnAction(event -> controller.resetgame());
 
-        MenuItem resetgame = new MenuItem("Reset Game");
+        MenuItem resetgame = new MenuItem("Reset");
         resetgame.setOnAction(event -> controller.resetgame());
 
         SeparatorMenuItem sep = new SeparatorMenuItem();
 
-        MenuItem exitgame = new MenuItem("Exit Game");
+        MenuItem exitgame = new MenuItem("Exit");
         exitgame.setOnAction(event -> exitgame());
 
         fileMenu.getItems().addAll(newgame, resetgame, sep, exitgame);
@@ -74,7 +74,7 @@ public class Main extends Application {
         Alert aboutcon = new Alert(Alert.AlertType.INFORMATION);
         aboutcon.setTitle("About the Developer");
         aboutcon.setHeaderText("Abhinav Kannaujia");
-        aboutcon.setContentText("ha maine hi banaya hai!!");
+        aboutcon.setContentText("Yes it's made by me!!");
         aboutcon.show();
     }
 
